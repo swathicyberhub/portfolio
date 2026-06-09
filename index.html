@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P. Swathi | Operations Lead & Educator Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f5f7ff',
+                            100: '#ebf0ff',
+                            200: '#d6e0ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        success: '#10b981',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #4b5563;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        /* Print Styles for Professional Resume Generation */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            .print-page-break {
+                page-break-before: always;
+            }
+            .shadow-lg, .shadow-md, .shadow-xl {
+                border: 1px solid #e5e7eb;
+                box-shadow: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-gray-950 dark:text-slate-100 min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-slate-200 dark:border-gray-800 transition-colors no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+                        P. Swathi
+                    </span>
+                    <span class="ml-2 text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full font-medium">
+                        Ops Lead & Educator
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 font-medium transition-colors">About</a>
+                    <a href="#experience" class="text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 font-medium transition-colors">Experience</a>
+                    <a href="#skills" class="text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 font-medium transition-colors">Skills</a>
+                    <a href="#education" class="text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 font-medium transition-colors">Education</a>
+                    <a href="#resume-builder" class="text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 font-medium transition-colors">Get Resume</a>
+                    <a href="#contact" class="text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 font-medium transition-colors">Contact</a>
+                </div>
+
+                <!-- Right actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- Dark/Light Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-gray-800 focus:outline-none transition-colors">
+                        <i id="theme-toggle-dark-icon" class="hidden fa-solid fa-moon text-lg"></i>
+                        <i id="theme-toggle-light-icon" class="hidden fa-solid fa-sun text-lg"></i>
+                    </button>
+                    <!-- Quick Print Button -->
+                    <button onclick="window.print()" class="hidden sm:flex items-center gap-2 bg-slate-100 hover:bg-slate-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-slate-800 dark:text-slate-200 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors">
+                        <i class="fa-solid fa-print"></i> Print PDF
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-gray-800">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-b border-slate-200 dark:border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-gray-800">About</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-gray-800">Experience</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-gray-800">Skills</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-gray-800">Education</a>
+                <a href="#resume-builder" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-gray-800">Get Resume</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-gray-800">Contact</a>
+                <button onclick="window.print()" class="w-full text-left flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-gray-800">
+                    <i class="fa-solid fa-print text-blue-500"></i> Print Resume PDF
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Toast Notification Box (Custom Alert Alternative) -->
+    <div id="toast-container" class="fixed top-20 right-4 z-50 flex flex-col gap-2 pointer-events-none no-print"></div>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto no-print">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left: Hero Text -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-sm font-medium">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+                    Available for New Opportunities in Hyderabad / Remote
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+                    <span class="block text-slate-900 dark:text-white">P. Swathi</span>
+                    <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 dark:from-blue-400 dark:to-indigo-300">
+                        Founder and Director for CyberHub IT Academy
+                    </span>
+                </h1>
+
+                <!-- Profile Mode Switcher (Corporate Ops vs. Training/Educator) -->
+                <div class="bg-slate-100 dark:bg-gray-900 p-1 rounded-xl inline-flex w-full max-w-md border border-slate-200 dark:border-gray-800">
+                    <button id="btn-corporate" onclick="switchProfileMode('corporate')" class="flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-all duration-200 bg-white dark:bg-gray-800 shadow text-blue-600 dark:text-blue-400">
+                        <i class="fa-solid fa-briefcase mr-1.5"></i> Corporate Ops
+                    </button>
+                    <button id="btn-educator" onclick="switchProfileMode('educator')" class="flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-all duration-200 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200">
+                        <i class="fa-solid fa-graduation-cap mr-1.5"></i> Academic & Training
+                    </button>
+                </div>
+
+                <!-- Dynamic Description Blocks -->
+                <div id="desc-corporate" class="space-y-4 text-lg text-slate-600 dark:text-slate-300">
+                    <p>
+                        Highly analytical and results-driven <strong class="text-slate-900 dark:text-white font-semibold">Team Lead Operations</strong> with over 5 years of rich experience directing Credit Control, Technical Support, and Billing workflows for <span class="border-b-2 border-indigo-500/30 pb-0.5">ACT Corporation (formerly Beam Telecom)</span>.
+                    </p>
+                    <p>
+                        Specialized in managing cross-functional teams of up to 12 operators, optimizing revenue collections, minimizing service downtime (TAT/SLA tracking), and converting complex technical bottlenecks into prompt client solutions.
+                    </p>
+                </div>
+
+                <div id="desc-educator" class="hidden space-y-4 text-lg text-slate-600 dark:text-slate-300">
+                    <p>
+                        A certified educator holding a <strong class="text-slate-900 dark:text-white font-semibold">Master of Arts (M.A.) in Telugu from Osmania University</strong>, qualified with the prestigious <strong class="text-slate-900 dark:text-white font-semibold">Central Teaching Eligibility Test (CTET)</strong>, and equipped with a Bachelor of Education (B.Ed.).
+                    </p>
+                    <p>
+                        Marrying strong operational skills with academic excellence to design advanced educational models, handle community training programs, and drive highly motivated developmental environments.
+                    </p>
+                </div>
+
+                <!-- Quick Contact Badges -->
+                <div class="flex flex-wrap gap-4 text-sm font-medium text-slate-600 dark:text-slate-400">
+                    <a href="mailto:chinnariswathi@gmail.com" class="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <i class="fa-solid fa-envelope text-blue-500"></i> chinnariswathi@gmail.com
+                    </a>
+                    <a href="tel:+916300670164" class="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <i class="fa-solid fa-phone text-emerald-500"></i> +91 6300670164
+                    </a>
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-red-500"></i> Hyderabad, India
+                    </span>
+                </div>
+
+                <!-- Call to Actions -->
+                <div class="pt-4 flex flex-wrap gap-4">
+                    <a href="#contact" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> Get in Touch
+                    </a>
+                    <a href="#resume-builder" class="px-6 py-3 bg-slate-200 hover:bg-slate-300 dark:bg-gray-800 dark:hover:bg-gray-700 text-slate-800 dark:text-slate-200 font-semibold rounded-xl transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-file-invoice mr-2"></i> View Custom Resume
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Interactive Profile Summary Card -->
+            <div class="lg:col-span-5 relative">
+                <!-- Decorative background blobs -->
+                <div class="absolute -top-12 -left-12 w-64 h-64 bg-blue-400/20 dark:bg-blue-500/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-indigo-400/20 dark:bg-indigo-500/10 rounded-full blur-3xl"></div>
+                
+                <div class="relative bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl shadow-xl p-8 overflow-hidden">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-xl font-bold">
+                            PS
+                        </div>
+                        <span class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+                            Quick Bio Data
+                        </span>
+                    </div>
+
+                    <!-- Details block -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-slate-100 dark:border-gray-800 pb-2">
+                            <span class="text-slate-500 dark:text-slate-400 text-sm">Designation</span>
+                            <span class="font-semibold text-sm">Team Leader (Operations)</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-slate-100 dark:border-gray-800 pb-2">
+                            <span class="text-slate-500 dark:text-slate-400 text-sm">Industry Focus</span>
+                            <span class="font-semibold text-sm">Telecom, ISP & Credit Ops</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-slate-100 dark:border-gray-800 pb-2">
+                            <span class="text-slate-500 dark:text-slate-400 text-sm">Academic Stream</span>
+                            <span class="font-semibold text-sm">M.A. Telugu, B.Ed. & CTET</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-slate-100 dark:border-gray-800 pb-2">
+                            <span class="text-slate-500 dark:text-slate-400 text-sm">Languages</span>
+                            <span class="font-semibold text-sm flex gap-1">
+                                <span class="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 text-xs px-2 py-0.5 rounded">Eng</span>
+                                <span class="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 text-xs px-2 py-0.5 rounded">Tel</span>
+                                <span class="bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-300 text-xs px-2 py-0.5 rounded">Hin</span>
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2">
+                            <span class="text-slate-500 dark:text-slate-400 text-sm">Tech Competencies</span>
+                            <span class="font-semibold text-sm">CCNA, MS Excel (VLookup, Sums)</span>
+                        </div>
+                    </div>
+
+                    <!-- Mini CTA for Interactive Stats -->
+                    <div class="mt-6 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-800/50 border border-blue-100 dark:border-gray-700">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-award text-blue-600 dark:text-blue-400 text-xl"></i>
+                            <div>
+                                <h4 class="text-sm font-bold">Award Winning Performance</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">Recipent of "Team Ovation" & "Outstanding Support" awards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Statistics Dashboard Section -->
+    <section class="py-12 bg-white dark:bg-gray-900 border-y border-slate-200 dark:border-gray-800 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <!-- Stat 1 -->
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-5xl font-extrabold text-blue-600 dark:text-blue-400">5+</div>
+                    <div class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Years Active Ops Experience</div>
+                </div>
+                <!-- Stat 2 -->
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-5xl font-extrabold text-indigo-600 dark:text-indigo-400">12+</div>
+                    <div class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Direct Team Size Handled</div>
+                </div>
+                <!-- Stat 3 -->
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-5xl font-extrabold text-teal-600 dark:text-teal-400">100%</div>
+                    <div class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">SLA & Revenue Metrics Hit</div>
+                </div>
+                <!-- Stat 4 -->
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-5xl font-extrabold text-amber-500">Dual</div>
+                    <div class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Tech & Academic Focus</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto no-print">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white sm:text-4xl">
+                Professional Journey
+            </h2>
+            <p class="mt-4 text-lg text-slate-500 dark:text-slate-400">
+                A chronology of proven corporate operations management, system engineering support, and rapid team promotions.
+            </p>
+        </div>
+
+        <!-- The Timeline structure -->
+        <div class="relative border-l border-slate-200 dark:border-gray-800 ml-4 md:ml-32">
+            
+            <!-- Timeline Item 1 -->
+            <div class="mb-12 relative pl-8 md:pl-12">
+                <!-- Circle indicator -->
+                <span class="absolute -left-3.5 top-1.5 flex h-7 w-7 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 border-4 border-slate-50 dark:border-gray-950 text-blue-600 dark:text-blue-400 shadow-sm">
+                    <i class="fa-solid fa-users text-xs"></i>
+                </span>
+                
+                <!-- Left Absolute Label (For desktop alignment) -->
+                <span class="hidden md:block absolute -left-36 top-2 text-right w-28 text-sm font-semibold text-slate-500 dark:text-slate-400">
+                    2010 — 2013
+                </span>
+
+                <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="md:hidden block text-xs font-bold text-blue-600 dark:text-blue-400 mb-1">July 2010 — July 2013</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Team Leader (Operations & Tech Support)</h3>
+                            <p class="text-sm font-medium text-slate-500 dark:text-slate-400">ACT Corporation (formerly BEAM TELECOM) • Hyderabad</p>
+                        </div>
+                        <span class="self-start sm:self-center px-2.5 py-1 text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 rounded-full border border-emerald-200 dark:border-emerald-800">
+                            Promoted Role
+                        </span>
+                    </div>
+                    
+                    <ul class="space-y-2.5 text-slate-600 dark:text-slate-300 text-sm">
+                        <li class="flex gap-2.5">
+                            <i class="fa-solid fa-circle-check text-blue-500 mt-1 flex-shrink-0"></i>
+                            <span>Directed a team of 12 personnel managing daily Credit Control, ISP technical support pipelines, and walk-in client interactions.</span>
+                        </li>
+                        <li class="flex gap-2.5">
+                            <i class="fa-solid fa-circle-check text-blue-500 mt-1 flex-shrink-0"></i>
+                            <span>Supervised daily diagnostics, network troubleshooting workflows, and prompt help-desk SLA closeouts to ensure minimal internet outages.</span>
+                        </li>
+                        <li class="flex gap-2.5">
+                            <i class="fa-solid fa-circle-check text-blue-500 mt-1 flex-shrink-0"></i>
+                            <span>Designed performance coaching sessions and structured SOP documents that enhanced team operational accuracy and collection speeds.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="mb-12 relative pl-8 md:pl-12">
+                <!-- Circle indicator -->
+                <span class="absolute -left-3.5 top-1.5 flex h-7 w-7 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900 border-4 border-slate-50 dark:border-gray-950 text-indigo-600 dark:text-indigo-400 shadow-sm">
+                    <i class="fa-solid fa-chart-pie text-xs"></i>
+                </span>
+                
+                <!-- Left Absolute Label -->
+                <span class="hidden md:block absolute -left-36 top-2 text-right w-28 text-sm font-semibold text-slate-500 dark:text-slate-400">
+                    2003 — 2006
+                </span>
+
+                <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="md:hidden block text-xs font-bold text-indigo-600 dark:text-indigo-400 mb-1">Jan 2003 — Dec 2006</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Branch Technical & Credit Coordinator</h3>
+                            <p class="text-sm font-medium text-slate-500 dark:text-slate-400">ACT Corporation (formerly BEAM TELECOM) • Banjara Hills</p>
+                        </div>
+                        <span class="self-start sm:self-center px-2.5 py-1 text-xs font-semibold bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-400 rounded-full border border-blue-200 dark:border-blue-800">
+                            Dual Specialization
+                        </span>
+                    </div>
+                    
+                    <ul class="space-y-2.5 text-slate-600 dark:text-slate-300 text-sm">
+                        <li class="flex gap-2.5">
+                            <i class="fa-solid fa-circle-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Coordinated between engineering, customer support, and credit controllers to accelerate complex escalation procedures under quick TAT.</span>
+                        </li>
+                        <li class="flex gap-2.5">
+                            <i class="fa-solid fa-circle-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Consistently achieved monthly collections targets through targeted customer convenient-retention procedures.</span>
+                        </li>
+                        <li class="flex gap-2.5">
+                            <i class="fa-solid fa-circle-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Earned the highly celebrated <strong class="text-slate-800 dark:text-white font-semibold">Team Ovation of the Year Award</strong> at Banjara Hills Branch.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="mb-4 relative pl-8 md:pl-12">
+                <!-- Circle indicator -->
+                <span class="absolute -left-3.5 top-1.5 flex h-7 w-7 items-center justify-center rounded-full bg-slate-100 dark:bg-gray-800 border-4 border-slate-50 dark:border-gray-950 text-slate-500 shadow-sm">
+                    <i class="fa-solid fa-headset text-xs"></i>
+                </span>
+                
+                <!-- Left Absolute Label -->
+                <span class="hidden md:block absolute -left-36 top-2 text-right w-28 text-sm font-semibold text-slate-500 dark:text-slate-400">
+                    Early Career
+                </span>
+
+                <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 p-6 rounded-2xl shadow-sm">
+                    <div class="mb-2">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Customer Care Executive</h3>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">ACT Corporation (formerly BEAM TELECOM)</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm">
+                        Initially joined as a Customer Care specialist. Recognized for outstanding diagnostic assistance and client engagement metrics, facilitating a direct promotion into Technical Support and Coordination management.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Skills Section -->
+    <section id="skills" class="py-20 bg-slate-100 dark:bg-gray-900/50 border-y border-slate-200 dark:border-gray-800 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white sm:text-4xl">
+                    Core Competencies
+                </h2>
+                <p class="mt-4 text-lg text-slate-500 dark:text-slate-400">
+                    A balanced blend of corporate operations leadership, technical troubleshooting, and pedagogical training skills.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Core Operations & Leadership -->
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-gray-800 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Operations Leadership</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Progress 1 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>SLA & TAT Management</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-gray-800 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <!-- Progress 2 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Credit Control / Revenue Ops</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-gray-800 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <!-- Progress 3 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Attrition / Team Coaching</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-gray-800 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical & Network Support -->
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-gray-800 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Technical & Systems</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Progress 1 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Desktop & Network Diagnostics</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-gray-800 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <!-- Progress 2 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Windows Servers (2003/2008) & OS</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-gray-800 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <!-- Progress 3 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Data Operations (Excel: VLookup, Formulae)</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-gray-800 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educator & Language Strengths -->
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-gray-800 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-teal-50 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Academic & Training</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Progress 1 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Instructional / Curriculum Design</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-gray-800 rounded-full h-2">
+                                <div class="bg-teal-600 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <!-- Progress 2 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Vernacular Content / M.A. Telugu</span>
+                                <span>98%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-gray-800 rounded-full h-2">
+                                <div class="bg-teal-600 h-2 rounded-full" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        <!-- Progress 3 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>SOP & Document Composition</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-gray-800 rounded-full h-2">
+                                <div class="bg-teal-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto no-print">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Left: Education Cards -->
+            <div class="lg:col-span-7 space-y-6">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Academic Qualifications</h2>
+                    <p class="text-sm text-slate-500 mt-1">A sound foundation combining Technical (B.Sc), Professional (B.Ed) and Masters level Arts (Telugu)</p>
+                </div>
+
+                <!-- Education Row 1 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 text-lg flex-shrink-0">
+                        <i class="fa-solid fa-university"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-blue-600 dark:text-blue-400">2021 — 2023</span>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-0.5">Master of Arts (M.A. Telugu)</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Osmania University, Hyderabad</p>
+                    </div>
+                </div>
+
+                <!-- Education Row 2 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-lg flex-shrink-0">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400">2017 — 2019</span>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-0.5">Bachelor of Education (B.Ed.)</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Pasha College of Education, Secunderabad</p>
+                    </div>
+                </div>
+
+                <!-- Education Row 3 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center text-teal-600 dark:text-teal-400 text-lg flex-shrink-0">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-teal-600 dark:text-teal-400">2008 — 2011</span>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-0.5">Bachelor of Computer Science (B.Sc. Computers)</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Acharya Nagarjuna University, Guntur</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Certifications & Accomplishments -->
+            <div class="lg:col-span-5 space-y-6">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Credentials & Accolades</h2>
+                    <p class="text-sm text-slate-500 mt-1">Verified achievements and specialized professional paths.</p>
+                </div>
+
+                <!-- Cert 1 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm space-y-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-stamp text-amber-500 text-2xl"></i>
+                        <div>
+                            <h3 class="font-bold text-slate-900 dark:text-white">CTET Qualified (2019)</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Central Teaching Eligibility Test (CBSE)</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">
+                        Qualified under Central guidelines ensuring high pedagogic proficiency and communication capabilities.
+                    </p>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm space-y-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-network-wired text-indigo-500 text-2xl"></i>
+                        <div>
+                            <h3 class="font-bold text-slate-900 dark:text-white">CCNA Training</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Undergone Intensive Network Course</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">
+                        Comprehensive practical training in IP routing, subnets, switching topologies, and help desk ticket diagnosis configurations.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Resume Preview / Print Section -->
+    <section id="resume-builder" class="py-20 bg-slate-100 dark:bg-gray-900 border-y border-slate-200 dark:border-gray-800 no-print">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Interactive Exportable Resume</h2>
+                <p class="mt-2 text-slate-500 dark:text-slate-400">Customize the focus block below and click print to generate a clean, executive styled PDF.</p>
+                
+                <div class="mt-6 flex justify-center gap-4">
+                    <button onclick="window.print()" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-print"></i> Generate PDF / Print
+                    </button>
+                    <button onclick="copyEmailToClipboard()" class="px-5 py-2.5 bg-white hover:bg-slate-50 border border-slate-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 text-slate-700 dark:text-slate-300 font-semibold rounded-lg flex items-center gap-2">
+                        <i class="fa-solid fa-copy"></i> Copy Contact Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Preview Container simulating A4 printable sheet -->
+            <div id="resume-sheet" class="bg-white dark:bg-gray-950 text-slate-900 dark:text-slate-100 border border-slate-300 dark:border-gray-800 p-8 sm:p-12 rounded-2xl shadow-xl space-y-6">
+                <!-- Header -->
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-200 dark:border-gray-800 pb-6 gap-4">
+                    <div>
+                        <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">P. Swathi</h1>
+                        <p class="text-sm font-semibold text-blue-600 dark:text-blue-400">Team Leader • Operations & Technical Support Coordinator</p>
+                    </div>
+                    <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 space-y-1">
+                        <div><i class="fa-solid fa-phone mr-2"></i> +91 6300670164</div>
+                        <div><i class="fa-solid fa-envelope mr-2"></i> chinnariswathi@gmail.com</div>
+                        <div><i class="fa-solid fa-location-dot mr-2"></i> Hyderabad, TS, India 500083</div>
+                    </div>
+                </div>
+
+                <!-- Summary -->
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Executive Summary</h2>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                        Dynamic Operations Professional with over 5 years of experience leading Credit Control, ISP Billing, and Help Desk Operations at ACT Corporation. Adept at driving customer convenient-retentions, formulating team KPIs, managing cross-functional technical workflows, and streamlining customer ticket escalations. Complemented by professional qualifications in Education (B.Ed., CTET Certified) and a Master of Arts in Telugu.
+                    </p>
+                </div>
+
+                <!-- Experience -->
+                <div class="space-y-4">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100 dark:border-gray-900 pb-1">Professional Experience</h2>
+                    
+                    <!-- Exp Block 1 -->
+                    <div>
+                        <div class="flex justify-between items-start text-sm font-bold">
+                            <h4>Team Leader - Operations & Customer Success</h4>
+                            <span>July 2010 — July 2013</span>
+                        </div>
+                        <p class="text-xs text-blue-600 dark:text-blue-400 mb-2">ACT Corporation (Formerly Beam Telecom) • Hyderabad</p>
+                        <ul class="list-disc list-inside space-y-1 text-xs text-slate-600 dark:text-slate-300 pl-2">
+                            <li>Supervised 12 technical support operators for daily broadband diagnostic procedures.</li>
+                            <li>Optimized monthly regional billing targets, implementing structured payment recovery policies.</li>
+                            <li>Monitored unresolved tickets, cooperating directly with the NOC to minimize downstream downtime.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Exp Block 2 -->
+                    <div>
+                        <div class="flex justify-between items-start text-sm font-bold">
+                            <h4>Branch Technical & Credit Control Coordinator</h4>
+                            <span>Jan 2003 — Dec 2006</span>
+                        </div>
+                        <p class="text-xs text-blue-600 dark:text-blue-400 mb-2">ACT Corporation (Formerly Beam Telecom) • Banjara Hills</p>
+                        <ul class="list-disc list-inside space-y-1 text-xs text-slate-600 dark:text-slate-300 pl-2">
+                            <li>Directed second-level resolution timelines (SLA), closing complex requests efficiently.</li>
+                            <li>Awarded the outstanding "Team Ovation of the Year (2006)" for branch performance benchmarks.</li>
+                            <li>Formulated localized training processes to assist desk staff in desktop & network configurations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="space-y-4">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100 dark:border-gray-900 pb-1">Education & Credentials</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div class="space-y-1.5">
+                            <div><strong>Master of Arts (M.A. Telugu)</strong> — Osmania University (2023)</div>
+                            <div><strong>Bachelor of Education (B.Ed.)</strong> — Pasha College of Education (2019)</div>
+                            <div><strong>B.Sc. Computers</strong> — Nagarjuna University (2011)</div>
+                        </div>
+                        <div class="space-y-1.5">
+                            <div><strong>CTET Qualified</strong> — Central Teaching Eligibility Test (CBSE, 2019)</div>
+                            <div><strong>CCNA Undergone</strong> — Zoom Technologies Network course</div>
+                            <div><strong>Primary Address</strong> — VKRC Road, Gannavaram, AP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRICT MEDIA PRINT LAYOUT OVERLAY (Hidden during interactive web view) -->
+    <div class="hidden print-only bg-white text-black p-12 space-y-8" style="font-family: serif;">
+        <div class="border-b-2 border-slate-800 pb-4 text-center">
+            <h1 class="text-4xl font-bold">P. Swathi</h1>
+            <p class="text-sm font-semibold tracking-wide">Plot No.23, Mallikarjuna Nagar, Nagaram, Hyderabad-500083</p>
+            <p class="text-sm font-semibold tracking-wide">Mobile: +91-6300670164 | Email: chinnariswathi@gmail.com</p>
+        </div>
+
+        <div>
+            <h2 class="text-lg font-bold uppercase tracking-wider border-b border-slate-800 mb-2">Professional Summary</h2>
+            <p class="text-sm leading-relaxed text-justify">
+                Over 5 years of relevant experience as a Team Lead Operations in Credit Control and Technical support operations working with ACT Corporation (formerly BEAM TELECOM). Proven capability managing teams of up to 12 executives. Highly focused on service level targets (SLAs), client billing optimization, desktop and basic network troubleshoot operations, and localized employee performance coaching. Handled high-intensity escalations safely while retaining a customer-centric delivery path.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="text-lg font-bold uppercase tracking-wider border-b border-slate-800 mb-2">Professional Experience</h2>
+            <div class="space-y-4">
+                <div>
+                    <div class="flex justify-between font-bold text-sm">
+                        <span>TEAM LEADER - OPERATIONS & TECHNICAL SUPPORT</span>
+                        <span>July 2010 — July 2013</span>
+                    </div>
+                    <p class="italic text-xs">ACT Corporation (formerly BEAM TELECOM) • Hyderabad</p>
+                    <ul class="list-disc list-inside text-xs mt-1.5 space-y-1">
+                        <li>Supervised a dual operational support wing overseeing billing audits, credit optimization, and network help desks.</li>
+                        <li>Coached desk personnel on standard operating procedures (SOP), raising team productivity by 15%.</li>
+                        <li>Identified training needs and structured workflow guidelines to align operations directly with SLA standards.</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="flex justify-between font-bold text-sm">
+                        <span>BRANCH TECHNICAL & CREDIT COORDINATOR</span>
+                        <span>Jan 2003 — Dec 2006</span>
+                    </div>
+                    <p class="italic text-xs">ACT Corporation (formerly BEAM TELECOM) • Banjara Hills Branch</p>
+                    <ul class="list-disc list-inside text-xs mt-1.5 space-y-1">
+                        <li>Liaised extensively between branch engineers and the corporate NOC regarding downstream outages.</li>
+                        <li>Awarded the Outstanding Branch "Team Ovation" recognition for peak recovery targets and diagnostic support in 2006.</li>
+                        <li>Handled daily walk-in escalations directly, resolving technical concerns under strict turn-around-time limits.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="print-page-break pt-8">
+            <h2 class="text-lg font-bold uppercase tracking-wider border-b border-slate-800 mb-2">Education & Certifications</h2>
+            <ul class="space-y-2 text-xs">
+                <li><strong>M.A. Telugu</strong> — Osmania University, Hyderabad (2021-2023)</li>
+                <li><strong>Bachelor of Education (B.Ed.)</strong> — Pasha College of Education, Secunderabad (2017-2019)</li>
+                <li><strong>Central Teaching Eligibility Test (CTET)</strong> — Qualified CBSE (2019)</li>
+                <li><strong>B.Sc. Computers</strong> — Nagarjuna University, Guntur (2008-2011)</li>
+                <li><strong>CCNA Course Certification</strong> — Zoom Technologies, Hyderabad</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-lg font-bold uppercase tracking-wider border-b border-slate-800 mb-2">Core Technical Skills</h2>
+            <p class="text-xs leading-relaxed">
+                <strong>Operating Systems:</strong> Windows Server 2003/2008, Windows XP/7/8/10<br>
+                <strong>Network Diagnostics:</strong> IP Configuration, Basic Routing, Subnets, DNS configuration, and equipment inventory list systems.<br>
+                <strong>Office Applications:</strong> MS Excel (VLookup, Summaries, Pivot reporting tables), MS PowerPoint.<br>
+                <strong>Spoken Languages:</strong> English, Telugu, Hindi.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto no-print">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Left Info column -->
+            <div class="lg:col-span-5 space-y-6">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Let's Collaborate</h2>
+                    <p class="mt-2 text-slate-500 dark:text-slate-400">Reach out for professional team coordination opportunities, network setup requests, training partnerships, or educational projects.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Card item -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 font-bold uppercase">Call Me Directly</p>
+                            <a href="tel:+916300670164" class="font-semibold text-slate-900 dark:text-white hover:text-blue-500 transition-colors">+91 6300670164</a>
+                        </div>
+                    </div>
+
+                    <!-- Card item -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 font-bold uppercase">Email Me</p>
+                            <a href="mailto:chinnariswathi@gmail.com" class="font-semibold text-slate-900 dark:text-white hover:text-indigo-500 transition-colors">chinnariswathi@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Card item -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg bg-teal-50 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-location-arrow"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 font-bold uppercase">Current Location</p>
+                            <p class="font-semibold text-slate-900 dark:text-white">Mallikarjuna Nagar, Nagaram, Hyderabad-500083</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right contact form -->
+            <div class="lg:col-span-7">
+                <form id="portfolio-contact-form" onsubmit="handleFormSubmit(event)" class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 p-8 rounded-2xl shadow-sm space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="form-name" class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Name</label>
+                            <input type="text" id="form-name" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="form-email" class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Email</label>
+                            <input type="email" id="form-email" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="form-subject" class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">Subject</label>
+                        <input type="text" id="form-subject" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all">
+                    </div>
+
+                    <div>
+                        <label for="form-message" class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Message</label>
+                        <textarea id="form-message" rows="4" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> Send Secure Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-900 border-t border-slate-200 dark:border-gray-800 py-10 text-center text-sm text-slate-400 no-print">
+        <p>© 2026 P. Swathi. All rights reserved. Created for operations and curriculum representation.</p>
+    </footer>
+
+    <!-- Vanilla Javascript Logic -->
+    <script>
+        // Theme initialization
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            document.getElementById('theme-toggle-light-icon').classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            document.getElementById('theme-toggle-dark-icon').classList.remove('hidden');
+        }
+
+        // Toggle Dark/Light Mode
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', function() {
+            const darkIcon = document.getElementById('theme-toggle-dark-icon');
+            const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+            darkIcon.classList.toggle('hidden');
+            lightIcon.classList.toggle('hidden');
+
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                showToast("Light mode enabled", "info");
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                showToast("Dark mode enabled", "info");
+            }
+        });
+
+        // Mobile Menu controller
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Profile Switcher (Corporate vs. Educator)
+        function switchProfileMode(mode) {
+            const btnCorp = document.getElementById('btn-corporate');
+            const btnEduc = document.getElementById('btn-educator');
+            const descCorp = document.getElementById('desc-corporate');
+            const descEduc = document.getElementById('desc-educator');
+
+            if (mode === 'corporate') {
+                btnCorp.className = "flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-all duration-200 bg-white dark:bg-gray-800 shadow text-blue-600 dark:text-blue-400";
+                btnEduc.className = "flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-all duration-200 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200";
+                descCorp.classList.remove('hidden');
+                descEduc.classList.add('hidden');
+                showToast("Focus changed to Corporate Operations Lead", "success");
+            } else {
+                btnEduc.className = "flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-all duration-200 bg-white dark:bg-gray-800 shadow text-blue-600 dark:text-blue-400";
+                btnCorp.className = "flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-all duration-200 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200";
+                descCorp.classList.add('hidden');
+                descEduc.classList.remove('hidden');
+                showToast("Focus changed to Training & Educator Background", "success");
+            }
+        }
+
+        // Custom Toast Utility
+        function showToast(message, type = "success") {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `flex items-center gap-3 px-4 py-3 rounded-xl shadow-lg border text-sm font-semibold transition-all duration-300 transform translate-y-2 opacity-0 pointer-events-auto bg-white dark:bg-gray-900 ${
+                type === 'success' ? 'border-emerald-200 dark:border-emerald-800 text-emerald-600 dark:text-emerald-400' : 'border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400'
+            }`;
+            
+            toast.innerHTML = `
+                <i class="${type === 'success' ? 'fa-solid fa-circle-check' : 'fa-solid fa-circle-info'} text-lg"></i>
+                <span>${message}</span>
+            `;
+
+            container.appendChild(toast);
+            
+            // Trigger animation frame
+            setTimeout(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            }, 10);
+
+            // Close after 3.5 seconds
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-2');
+                setTimeout(() => toast.remove(), 300);
+            }, 3500);
+        }
+
+        // Clipboard feature using prompt fallback
+        function copyEmailToClipboard() {
+            const tempInput = document.createElement('input');
+            tempInput.value = "chinnariswathi@gmail.com";
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showToast("Email address copied to clipboard!", "success");
+            } catch(e) {
+                showToast("Failed to copy. Email is chinnariswathi@gmail.com", "info");
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // Simulated Contact Form Handling
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('form-name').value;
+            showToast(`Thank you, ${name}! Your request has been logged successfully.`, "success");
+            document.getElementById('portfolio-contact-form').reset();
+        }
+    </script>
+</body>
+</html>
